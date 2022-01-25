@@ -1,7 +1,7 @@
 const { request } = require("express")
 const express = require("express")
 const exphbs = require("express-handlebars")
-
+const port = process.env.port || 3000
 const app = express()
 
 //Set the view engine
@@ -45,6 +45,6 @@ app.get('/', (req, res)=>{
 })
 
 //Set up port for connection
-app.listen(3000, ()=>{
+app.listen(port, ()=>{
     console.log("Connected on port 3000")
 })
